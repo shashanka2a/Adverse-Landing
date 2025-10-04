@@ -2,7 +2,9 @@ import * as React from "react";
 
 import { cn } from "./utils";
 
-function Card({ className, ...props }: React.ComponentProps<"div">) {
+export type CardProps = React.ComponentProps<"div">;
+
+function Card({ className, ...props }: CardProps) {
   return (
     <div
       data-slot="card"
@@ -90,3 +92,4 @@ export {
   CardDescription,
   CardContent,
 };
+

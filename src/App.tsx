@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'motion/react';
+import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import { Button } from './components/ui/button';
 import { Card, CardContent } from './components/ui/card';
 import { MagneticButton } from './components/ui/magnetic-button';
