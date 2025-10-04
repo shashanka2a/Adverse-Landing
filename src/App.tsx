@@ -428,7 +428,7 @@ const PricingSection = () => {
       name: 'Starter',
       price: '$299',
       period: 'per project',
-      description: 'Perfect for individual creators and small projects',
+      description: 'Perfect for individual creators, small projects',
       features: [
         'Up to 60 seconds video',
         'HD (1080p) resolution',
@@ -623,7 +623,7 @@ const ProcessSection = () => {
     {
       icon: Lightbulb,
       title: 'Concept',
-      description: 'Transform your wildest visions into structured creative strategies',
+      description: 'Transform your wildest visions into creative strategies',
       color: '#f59e0b'
     },
     {
@@ -635,7 +635,7 @@ const ProcessSection = () => {
     {
       icon: Video,
       title: 'AI Generation',
-      description: 'Create impossible visuals using quantum-powered AI engines',
+      description: 'Create impossible visuals using AI engines',
       color: '#8b5cf6'
     },
     {
