@@ -215,56 +215,16 @@ const Navigation = () => {
 const HeroSection = () => {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 300], [0, -50]);
-  const y2 = useTransform(scrollY, [0, 300], [0, -25]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Dynamic Background System */}
-      <div className="absolute inset-0">
-        <ParticleField count={60} />
-        <MorphingBlob className="top-10 right-10 w-96 h-96 opacity-30" />
-        <MorphingBlob className="bottom-10 left-10 w-80 h-80 opacity-20" />
-        
-        {/* Animated Grid */}
-        <motion.div 
-          className="absolute inset-0 opacity-10"
-          style={{ y: y2 }}
-        >
-          <div 
-            className="w-full h-full animate-grid-move"
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)
-              `,
-              backgroundSize: '50px 50px',
-            }}
-          />
-        </motion.div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-black">
+      {/* Pitch black background */}
+      <div className="absolute inset-0 bg-black" />
 
       <motion.div 
         className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
       >
-        {/* Floating Elements */}
-        <motion.div
-          className="absolute -top-20 left-1/4 w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
-          animate={{
-            y: [-10, 10, -10],
-            rotate: [0, 360],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute -top-10 right-1/3 w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-60"
-          animate={{
-            y: [10, -10, 10],
-            rotate: [360, 0],
-            scale: [1.2, 1, 1.2]
-          }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        />
+        {/* Remove floating elements - keep clean */}
 
         <motion.div
           className="mb-8"
